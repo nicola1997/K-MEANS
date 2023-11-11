@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ClientServer_K-Means-main/KMeansServer/KMeansServer.iml" filepath="$PROJECT_DIR$/ClientServer_K-Means-main/KMeansServer/KMeansServer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/progettocluster.iml" filepath="$PROJECT_DIR$/.idea/progettocluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/K-MEANS.iml" filepath="$PROJECT_DIR$/K-MEANS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KMeansClient/KMeansClient.iml" filepath="$PROJECT_DIR$/KMeansClient/KMeansClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KMeansServer/KMeansServer.iml" filepath="$PROJECT_DIR$/KMeansServer/KMeansServer.iml" />
     </modules>
   </component>
 </project>

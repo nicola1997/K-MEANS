@@ -1,1 +1,0 @@
-moduleSearchIndex = [{"l":"KMeansClient"},{"l":"KMeansServer"}];updateSearchResults();
