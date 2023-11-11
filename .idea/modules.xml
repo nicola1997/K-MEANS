@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ClientServer_K-Means-main/KMeansServer/KMeansServer.iml" filepath="$PROJECT_DIR$/ClientServer_K-Means-main/KMeansServer/KMeansServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClientServer_K-Means-main/KMeansClient/Project_JavaFX.iml" filepath="$PROJECT_DIR$/ClientServer_K-Means-main/KMeansClient/Project_JavaFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/progettocluster.iml" filepath="$PROJECT_DIR$/.idea/progettocluster.iml" />
+    </modules>
+  </component>
+</project>

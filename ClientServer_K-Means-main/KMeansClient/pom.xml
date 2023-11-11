@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- Definizione del modello Maven per il progetto -->
+  <!-- Informazioni sul progetto -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example</groupId>
+  <artifactId>Project_JavaFX</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>Project_JavaFX</name>
+
+  <!-- Proprietà del progetto -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit.version>5.9.2</junit.version>  </properties>
+
+  <!-- Dipendenze del progetto -->
+  <dependencies>
+    <!-- Dipendenza per JavaFX Controls -->
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-controls</artifactId>
+      <version>17.0.6</version>
+    </dependency>
+
+    <!-- Dipendenza per JavaFX FXML -->
+    <dependency>
+      <!-- Dipendenza per ControlsFX -->
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-fxml</artifactId>
+      <version>17.0.6</version>
+    </dependency>
+
+    <!-- Dipendenza per ControlsFX -->
+    <dependency>
+      <groupId>org.controlsfx</groupId>
+      <artifactId>controlsfx</artifactId>
+      <version>11.1.2</version>
+
+      <!-- Dipendenza per FormsFX -->
+    </dependency><dependency>
+    <groupId>com.dlsc.formsfx</groupId>
+    <artifactId>formsfx-core</artifactId>
+    <version>11.6.0</version>
+    <!-- Escludi tutte le dipendenze di JavaFX da FormsFX -->
+    <exclusions>
+      <exclusion>
+        <groupId>org.openjfx</groupId>
+        <artifactId>*</artifactId>
+      </exclusion>
+    </exclusions>
+
+    <!-- Dipendenza per BootstrapFX -->
+  </dependency><dependency>
+    <groupId>org.kordamp.bootstrapfx</groupId>
+    <artifactId>bootstrapfx-core</artifactId>
+    <version>0.4.0</version>
+  </dependency>
+
+    <!-- Dipendenze per JUnit 5 (Test) -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>  </dependencies>
+
+  <!-- Configurazione del processo di build -->
+  <build>
+    <!-- Plugin per la compilazione del codice -->
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <!-- Impostazioni del compilatore per Java 17 -->
+          <source>17</source>
+          <target>17</target>
+        </configuration>
+      </plugin>
+
+      <!-- Plugin per JavaFX -->
+      <plugin>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.8</version>
+        <!-- Configurazione per l'esecuzione di JavaFX -->
+        <executions>
+          <execution>
+            <!-- Configurazione predefinita per l'esecuzione con: mvn clean javafx:run -->
+            <id>default-cli</id>
+            <configuration>
+              <!-- Classe principale da eseguire -->
+              <mainClass>com.example.project_javafx/com.example.project_javafx.HelloApplication</mainClass>
+              <!-- Nome del launcher -->
+              <launcher>app</launcher>
+              <!-- Nome per il file ZIP generato da jlink -->
+              <jlinkZipName>app</jlinkZipName>
+              <!-- Nome per l'immagine generata da jlink -->
+              <jlinkImageName>app</jlinkImageName>
+              <!-- Altre opzioni per jlink -->
+              <noManPages>true</noManPages>
+              <stripDebug>true</stripDebug>
+              <noHeaderFiles>true</noHeaderFiles>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
