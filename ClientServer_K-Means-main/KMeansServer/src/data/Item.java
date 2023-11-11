@@ -29,11 +29,15 @@ public abstract class Item implements Serializable {
     this.attribute = attribute;
     this.value = value;
   }
-
+  /**
+   * Attributo coinvolto nell'item.
+   */
   public Attribute getAttribute() {
     return attribute;
   }
-
+  /**
+   * Valore assegnato all'attributo nell'item.
+   */
   public Object getValue() {
     return value;
   }

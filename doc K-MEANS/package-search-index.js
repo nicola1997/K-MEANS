@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"KMeansServer","l":"data"},{"m":"KMeansServer","l":"database"},{"m":"KMeansClient","l":"keyboardInput"},{"m":"KMeansServer","l":"mining"},{"m":"KMeansClient","l":"run"},{"m":"KMeansServer","l":"server"}];updateSearchResults();

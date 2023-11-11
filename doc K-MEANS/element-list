@@ -1,0 +1,8 @@
+module:KMeansClient
+keyboardInput
+run
+module:KMeansServer
+data
+database
+mining
+server
