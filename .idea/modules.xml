@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ClientServer_K-Means-main/KMeansServer/KMeansServer.iml" filepath="$PROJECT_DIR$/ClientServer_K-Means-main/KMeansServer/KMeansServer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ClientServer_K-Means-main/KMeansClient/Project_JavaFX.iml" filepath="$PROJECT_DIR$/ClientServer_K-Means-main/KMeansClient/Project_JavaFX.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/progettocluster.iml" filepath="$PROJECT_DIR$/.idea/progettocluster.iml" />
     </modules>
   </component>
