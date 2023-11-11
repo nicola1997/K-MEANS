@@ -94,7 +94,8 @@ public class ServerOneClient extends Thread {
         try {
             out.writeObject(result);
             if (result.equals("OK")) {
-                out.writeObject("Numero iterazioni: "+numIter+"\n"+kmeans.getC().toString(data));
+                out.writeObject(numIter);
+                out.writeObject(kmeans.getC().toString(data));
             }
         } catch (IOException e) {
             e.printStackTrace();
