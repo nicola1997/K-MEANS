@@ -21,7 +21,13 @@ public class MainTest {
     private String table;
     private int k;
 
-
+    /**
+     * Costruttore della classe MainTest.
+     *
+     * @param ip   Indirizzo IP del server remoto.
+     * @param port Porta del server remoto.
+     * @throws IOException Eccezione in caso di errore di input/output.
+     */
     public MainTest(String ip, int port) throws IOException {
         InetAddress addr = InetAddress.getByName(ip); //ip
         System.out.println("addr = " + addr);
@@ -31,7 +37,11 @@ public class MainTest {
         in = new ObjectInputStream(socket.getInputStream());
         // stream con richieste del client
     }
-
+    /**
+     * Visualizza il menu e richiede la scelta dell'utente.
+     *
+     * @return La scelta dell'utente.
+     */
     private int menu() {
         int answer;
         System.out.println("Scegli una opzione");
@@ -43,7 +53,15 @@ public class MainTest {
         } while (answer <= 0 || answer > 2);
         return answer;
     }
-
+    /**
+     * Esegue l'apprendimento da file.
+     *
+     * @return Il risultato dell'apprendimento.
+     * @throws SocketException    Eccezione in caso di errore del socket.
+     * @throws ServerException    Eccezione lanciata dal server.
+     * @throws IOException        Eccezione in caso di errore di input/output.
+     * @throws ClassNotFoundException Eccezione in caso di classe non trovata durante la deserializzazione.
+     */
     private String learningFromFile() throws SocketException, ServerException, IOException, ClassNotFoundException {
         out.writeObject(3);
         System.out.print("Inserisci nome database: ");
@@ -87,7 +105,15 @@ public class MainTest {
         if (result.equals("OK")) return (String) in.readObject();
         else throw new ServerException(result);
     }
-
+    /**
+     * Esegue l'apprendimento dai dati del database.
+     *
+     * @return Il set di cluster appreso.
+     * @throws SocketException    Eccezione in caso di errore del socket.
+     * @throws ServerException    Eccezione lanciata dal server.
+     * @throws IOException        Eccezione in caso di errore di input/output.
+     * @throws ClassNotFoundException Eccezione in caso di classe non trovata durante la deserializzazione.
+     */
     private String learningFromDbTable() throws SocketException, ServerException, IOException, ClassNotFoundException {
         out.writeObject(1);
         System.out.print("Numero di cluster: ");
@@ -100,6 +126,14 @@ public class MainTest {
         } else throw new ServerException(result);
     }
 
+    /**
+     * Archivia il set di cluster in un file.
+     *
+     * @throws SocketException    Eccezione in caso di errore del socket.
+     * @throws ServerException    Eccezione lanciata dal server.
+     * @throws IOException        Eccezione in caso di errore di input/output.
+     * @throws ClassNotFoundException Eccezione in caso di classe non trovata durante la deserializzazione.
+     */
     private void storeClusterInFile() throws SocketException, ServerException, IOException, ClassNotFoundException {
         out.writeObject(2);
         out.writeObject(db+table+k);
@@ -107,6 +141,11 @@ public class MainTest {
         if (!result.equals("OK")) throw new ServerException(result);
     }
 
+    /**
+     * Metodo principale per avviare il client.
+     *
+     * @param args Argomenti della riga di comando (ip e porta del server remoto).
+     */
     public static void main(String[] args) {
         if (args.length != 2) {
             System.out.println("Inserire ip e porta come argomenti");
@@ -184,7 +223,12 @@ public class MainTest {
             System.out.println(e);
         }
     }
-
+    /**
+     * Gestisce l'opzione dell'utente.
+     *
+     * @param str Testo da visualizzare per l'opzione.
+     * @return true se l'utente ha scelto "sì", false altrimenti.
+     */
     private static boolean option(String str) {
         char c;
         do {
