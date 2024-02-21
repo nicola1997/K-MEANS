@@ -1,2 +1,3 @@
 @echo off
-java -jar KMeansClient.jar
+java -jar KMeansClient.jar localhost 8080
+pause
