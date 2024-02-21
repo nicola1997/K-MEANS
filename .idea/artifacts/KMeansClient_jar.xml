@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KMeansClient:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/KMeansClient_jar</output-path>
+    <root id="archive" name="KMeansClient.jar">
+      <element id="module-output" name="KMeansClient" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/KMeansServer/src/lib/16.5. mysql-connector-java-8.0.29.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
